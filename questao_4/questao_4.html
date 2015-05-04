@@ -4,23 +4,22 @@
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <title>Questao 4</title>
-  <script>
-    function getStyle(){
-      var id = document.getElementById("box");
-      id.style.left = '0px';
-      id.style.top  = '0px';
-
-      while (id.style.top != '100px' && id.style.left != '100px'){
-        id.style.left = (parseInt(id.style.left.replace('px', '')) + 10) + "px";    
-        id.style.top  = (parseInt(id.style.top.replace('px', ''))  + 10) + "px";    
-      }
-      getStyle();
-    }
-
-    window.setInterval(getStyle, 1000);
-  </script>
 </head>
 <body>
   <div id="box"></div>
+  <script>
+      var id = document.getElementById('box');
+        id.style.left = '0px';
+        id.style.top  = '0px';
+
+      setInterval(function(){
+        if(id.style.left != '100px' && id.style.top != '100px'){
+          //id.style.left += '10px';
+          //id.style.top += '10px';
+          id.style.left = (parseInt(id.style.left.replace('px', '')) + 10) + "px";    
+          id.style.top  = (parseInt(id.style.top.replace('px', ''))  + 10) + "px";
+        } 
+      },10);
+  </script>
 </body>
 </html>
