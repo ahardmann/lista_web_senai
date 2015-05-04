@@ -1,0 +1,1 @@
+06 - Crie um formulário para inserção de um empregado, com três campos: nome, sobrenome e salario. Faça uma validação para que o nome só aceite letras. Ao ser validado crie um objeto literal com os respectivos atributos e insira os valores pego. Coloque um alert na tela dando o feedback ao usuário caso seja inserido, ou caso a validação não estiver correta.

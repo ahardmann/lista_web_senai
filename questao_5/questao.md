@@ -1,0 +1,1 @@
+05 - Baseado nos conceitos aprendidos de O.O. em javascript crie uma Classe chamada Empregado, que tem três atributos: nome, sobrenome e salarioMensal. A classe também deve conter dois métodos calcularSalarioAno que retorna o salário mensal multiplicado por 12 e dadosEmpregado que retorna os dados seguido este modelo: “Carlos Silva, Salário: 120.5”

@@ -1,0 +1,1 @@
+01 - Escreva uma função que receba uma string e imprima as 4 primeiras letras
