@@ -4,32 +4,55 @@
 		<meta charset = "UTF-8">
 		<title>Questao 6</title>
 		<script>
-			var dados = function(nome,sobrenome,salario){
-				this.nome = nome;
-				this.sobrenome = sobrenome;
-				this.salario = salario;
 
-				this.pega = function(){
-					
+			function valida_form(){
+				var dadosNome = document.forms["formEmpregado"].elements['none'].value;
+				var dadosSobrenome = document.forms["formEmpregado"].elements['sobrenome'].value;
+				var dadosSalario = document.forms["formEmpregado"].elements['salario'].value;
+
+				if(dadosNome =="" || dadosSobrenome =="" || dadosSalario =="" ){
+					alert("preencha campo em branco");
+				}else{
+					alert("campos preenchidos");
+
+					var Empregado ={
+						nome: dadosNome.value,
+						sobrenome: dadosSobrenome.value,
+						salario: dadosSalario.value 
+					};
+
+					console.log(Empregado.nome);
+					console.log(Empregado.sobrenome);
+					console.log(Empregado.salario);
 				}
-
-				alert("campos preenchidos corretamentes");
 			}
+				/*this.pega = function(){
+					document.getElementById('formEmpregado').addEventListener('submit', function () {
+    					this.nome = this.querySelector('input[name=none]'), nome = nome.value;
+    					this.sobrenome = this.querySelector('input[name=sobrenome]'), sobrenome = sobrenome.value;
+    					this.salario = this.querySelector('input[name=salario]'), salario = salario.value;
+					});
+				}*/
+
 		</script>
 	</head>
 		<body>
 			<main role = "main">
-				<form id="form empregado">
+				<form id="formEmpregado" method="post">
 					<fieldset>
 	                    <legend>Cadastro Novo Empregado</legend>
+
 	                    <label for= "none"> Nome: </label>
-	                    <input type ="text" if="none" name = "none" placeholder="nome" required>
+	                    <input type ="text" if="none" name = "none" placeholder="ex: Arthur" />
+
 	                    <label for="sobrenome"> Sobrenome:</label>
-	                    <input type="text" if="sobrenome" name="sobrenome" placeholder="sobrenome" required>
+	                    <input type="text" if="sobrenome" name="sobrenome" placeholder="ex: Hardmann" />
+
 	                    <label for="sal">Salario:</label>
-	                    <input type="sal">
+	                    <input type="number" name="salario" placeholder="ex: R$123,45" />
+
 					</fieldset>
-					<input type="submit">
+					<input type="submit" class="button" value="Enviar" onclick="valida_form()" />
 				</form>
 			</main>	
 		</body>	

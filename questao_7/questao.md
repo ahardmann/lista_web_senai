@@ -1,1 +1,3 @@
-07 - Desafio Lista: faça uma lista de tarefas(tarefa 01, tarefa 02) onde o usuário possa inserir um nova tarefa através de um input text e clicando no botão “incluir”. O código deve incluir pelo menos duas funções: inserirTarefa – responsável por validar se o campo esta branco e inserir a nova tarefa na lista de tarefas; printTarefas – responsável por imprimir as tarefas na tela em forma de lista.
+07 - Desafio Lista: faça uma lista de tarefas(tarefa 01, tarefa 02) onde o usuário possa inserir um nova tarefa através de um input text e clicando no botão “incluir”.
+ O código deve incluir pelo menos duas funções: inserirTarefa – responsável por validar se o campo esta branco e inserir a nova tarefa na lista de tarefas; 
+ printTarefas – responsável por imprimir as tarefas na tela em forma de lista.

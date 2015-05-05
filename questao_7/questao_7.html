@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Questao 7</title>
+	<script>
+		var novaTarefa = document.getElementById('novaTarefa');
+		var inserirTarefa  = document.getElementById('inserir');
+		var printTarefa   = document.getElementById('list');
+
+		function addTarefa () {
+    		var text = novaTarefa.value;
+    		var li = document.getElementBy('li');
+    		li.innerHTML = "<label>" + text + "</label>" + 
+                "<button class='delete'>Delete</button>";
+
+    		printTarefa.appendChild(li);
+    	}
+	</script>
+</head>
+<body>
+	 <h4> Tarefas </h4>
+    <input id='novaTarefa' type='text'>
+    <button type=("submit") id='inserir' onclick=("addTarefa()")>Inserir</button>
+    <ul id='lista'>
+    </ul>
+</body>
+</html>
