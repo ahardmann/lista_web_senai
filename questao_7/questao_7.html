@@ -4,24 +4,34 @@
 	<meta charset="UTF-8">
 	<title>Questao 7</title>
 	<script>
-		var novaTarefa = document.getElementById('novaTarefa');
 		var inserirTarefa  = document.getElementById('inserir');
-		var printTarefa   = document.getElementById('list');
+        var newList = [];
 
-		function addTarefa () {
-    		var text = novaTarefa.value;
-    		var li = document.getElementBy('li');
-    		li.innerHTML = "<label>" + text + "</label>" + 
-                "<button class='delete'>Delete</button>";
+		function newTarefa () {
+    		var tarefa = document.getElementById('novaTarefa');
+            if(tarefa != ""){
+                newList.push(tarefa);
+                print(tarefa);
+                tarefa = '';
+            }else{
+                alert("informe nova tarefa!");
+            }
+        }
 
-    		printTarefa.appendChild(li);
-    	}
-	</script>
+        function print(novaTarefa){
+    		var list = document.getElementById('lista');
+            var li = document.createElement('li');
+    		li.innerHTML = "<label>" + novaTarefa.value + "</label>";
+    		list.appendChild(li);
+        }
+
+        inserirTarefa.onclick = newTarefa();
+    </script>
 </head>
 <body>
-	 <h4> Tarefas </h4>
+	<h4> Tarefas </h4>
     <input id='novaTarefa' type='text'>
-    <button type=("submit") id='inserir' onclick=("addTarefa()")>Inserir</button>
+    <button type=("submit") id='inserir')>Inserir</button>
     <ul id='lista'>
     </ul>
 </body>
