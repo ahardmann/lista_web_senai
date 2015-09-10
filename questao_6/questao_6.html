@@ -10,7 +10,7 @@
 				var dadosSobrenome = document.forms["formEmpregado"].elements['sobrenome'].value;
 				var dadosSalario = document.forms["formEmpregado"].elements['salario'].value;
 
-				if(dadosNome =="" || dadosSobrenome =="" || dadosSalario =="" ){
+				if(dadosNome == "" || dadosSobrenome == "" || dadosSalario == "" ){
 					alert("preencha campo em branco");
 				}else{
 					alert("campos preenchidos");
@@ -21,12 +21,9 @@
 						salario: dadosSalario.value 
 					};
 
-					/*console.log(Empregado.nome);
+					console.log(Empregado.nome);
 					console.log(Empregado.sobrenome);
-					console.log(Empregado.salario);*/
-					print(Empregado.nome);
-					print(Empregado.sobrenome);
-					print(Empregado.salario);
+					console.log(Empregado.salario);
 				}
 			}
 		</script>
